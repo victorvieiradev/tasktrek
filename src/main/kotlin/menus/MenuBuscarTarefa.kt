@@ -1,5 +1,7 @@
-package org.example
+package org.example.menus
 
+import org.example.BuscadorTarefa
+import org.example.Tarefa
 import java.util.*
 
 class MenuBuscarTarefa(

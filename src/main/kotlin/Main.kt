@@ -1,5 +1,10 @@
 package org.example
 
+import org.example.menus.Menu
+import org.example.menus.MenuAtualizarTarefa
+import org.example.menus.MenuBuscarTarefa
+import org.example.menus.MenuTarefa
+
 fun main() {
     val criarTarefa = CriarTarefa()
     val listarTarefas = ListarTarefas()

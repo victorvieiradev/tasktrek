@@ -1,5 +1,6 @@
-package org.example
+package org.example.menus
 
+import org.example.GerenciadorTarefas
 import java.util.*
 
 class Menu(

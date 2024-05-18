@@ -1,5 +1,9 @@
 package org.example
 
+import org.example.menus.MenuAtualizarTarefa
+import org.example.menus.MenuBuscarTarefa
+import org.example.menus.MenuTarefa
+
 class GerenciadorTarefas(
     private val menuTarefa: MenuTarefa,
     private val listarTarefas: ListarTarefas,

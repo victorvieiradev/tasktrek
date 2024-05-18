@@ -1,4 +1,7 @@
-package org.example
+package org.example.menus
+
+import org.example.CriarTarefa
+import org.example.Tarefa
 
 class MenuTarefa(
     private val criarTarefa: CriarTarefa

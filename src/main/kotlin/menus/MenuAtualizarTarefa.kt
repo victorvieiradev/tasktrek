@@ -1,5 +1,7 @@
-package org.example
+package org.example.menus
 
+import org.example.AtualizarTarefa
+import org.example.Tarefa
 import java.util.*
 
 class MenuAtualizarTarefa(
