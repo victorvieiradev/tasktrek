@@ -23,7 +23,7 @@ class Menu(
             1 -> gerenciadorTarefas.adicionarTarefa()
             2 -> gerenciadorTarefas.exibirTarefasAFazer()
             3 -> gerenciadorTarefas.buscarTarefa()
-            4 -> ""//atualizarTarefa()"
+            4 -> gerenciadorTarefas.atualizarTarefa()
             5 -> ""//excluirTarefa()"
             6 -> println("Saindo...")
             else -> println("Opção inválida! Tente novamente.")

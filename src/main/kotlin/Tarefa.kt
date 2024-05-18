@@ -4,8 +4,8 @@ import java.util.UUID
 
 data class Tarefa(
     val id: UUID,
-    val titulo: String,
-    val descricao: String,
+    var titulo: String,
+    var descricao: String,
     val status: Status = Status.PENDENTE
 ){
     override fun toString(): String {

@@ -12,6 +12,16 @@ class BuscadorTarefa(
         }
     }
 
+    fun buscarTarefaPeloId(id: String, lista: MutableList<Tarefa>): Tarefa {
+        val listaFiltrada = lista.filter { tarefa: Tarefa ->
+            tarefa.id.toString() == id
+        }
+        if (listaFiltrada.isEmpty()){
+            throw RuntimeException("Não existe tarefa com o id informado.")
+        }
+        return listaFiltrada.first()
+    }
+
     private fun realizarFiltroNaLista(
         lista: MutableList<Tarefa>,
         pesquisa: String
