@@ -1,14 +1,17 @@
 package org.example
 
+import org.example.casosdeuso.ListarTarefas
 import org.example.menus.MenuAtualizarTarefa
 import org.example.menus.MenuBuscarTarefa
+import org.example.menus.MenuConcluirTarefa
 import org.example.menus.MenuTarefa
 
 class GerenciadorTarefas(
     private val menuTarefa: MenuTarefa,
     private val listarTarefas: ListarTarefas,
     private val menuBuscarTarefa: MenuBuscarTarefa,
-    private val menuAtualizarTarefa: MenuAtualizarTarefa
+    private val menuAtualizarTarefa: MenuAtualizarTarefa,
+    private val menuConcluirTarefa: MenuConcluirTarefa
 ) {
     private val tarefasAfazer = mutableListOf<Tarefa>()
     fun adicionarTarefa(): Boolean{
@@ -23,6 +26,9 @@ class GerenciadorTarefas(
     }
     fun atualizarTarefa(){
         menuAtualizarTarefa.iniciar(tarefasAfazer)
+    }
+    fun concluirTarefa(){
+        menuConcluirTarefa.exibirMenu(tarefasAfazer)
     }
 
 }

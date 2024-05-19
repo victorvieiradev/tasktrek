@@ -25,7 +25,7 @@ class Menu(
             2 -> gerenciadorTarefas.exibirTarefasAFazer()
             3 -> gerenciadorTarefas.buscarTarefa()
             4 -> gerenciadorTarefas.atualizarTarefa()
-            5 -> ""//excluirTarefa()"
+            5 -> gerenciadorTarefas.concluirTarefa()
             6 -> println("Saindo...")
             else -> println("Opção inválida! Tente novamente.")
         }
@@ -37,7 +37,7 @@ class Menu(
         println("2 - Exibir tarefas")
         println("3 - Buscar tarefa")
         println("4 - Atualizar tarefa")
-        println("5 - Excluir tarefa")
+        println("5 - concluir tarefa")
         println("6 - Sair")
         print("Escolha uma opção: ")
     }

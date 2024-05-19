@@ -1,4 +1,7 @@
-package org.example
+package org.example.casosdeuso
+
+import org.example.Tarefa
+import java.util.UUID
 
 class BuscadorTarefa(
     private val listarTarefas: ListarTarefas
@@ -12,14 +15,12 @@ class BuscadorTarefa(
         }
     }
 
-    fun buscarTarefaPeloId(id: String, lista: MutableList<Tarefa>): Tarefa {
-        val listaFiltrada = lista.filter { tarefa: Tarefa ->
-            tarefa.id.toString() == id
+    fun buscarTarefaPeloId(id: UUID, lista: MutableList<Tarefa>): Any {
+        val indexDaTarefaBuscada = lista.indexOfFirst { it.id == id }
+        if (indexDaTarefaBuscada != -1){
+            return  lista[indexDaTarefaBuscada]
         }
-        if (listaFiltrada.isEmpty()){
-            throw RuntimeException("Não existe tarefa com o id informado.")
-        }
-        return listaFiltrada.first()
+        return println("A tarefa com o id: $id não foi encontrada.")
     }
 
     private fun realizarFiltroNaLista(

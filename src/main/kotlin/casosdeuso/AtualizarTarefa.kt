@@ -1,5 +1,6 @@
-package org.example
+package org.example.casosdeuso
 
+import org.example.Tarefa
 import java.util.*
 
 class AtualizarTarefa {

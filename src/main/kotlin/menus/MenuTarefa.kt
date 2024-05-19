@@ -1,6 +1,6 @@
 package org.example.menus
 
-import org.example.CriarTarefa
+import org.example.casosdeuso.CriarTarefa
 import org.example.Tarefa
 
 class MenuTarefa(

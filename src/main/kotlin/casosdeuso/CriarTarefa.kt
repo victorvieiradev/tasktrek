@@ -1,5 +1,7 @@
-package org.example
+package org.example.casosdeuso
 
+import org.example.Status
+import org.example.Tarefa
 import java.util.*
 
 class CriarTarefa {

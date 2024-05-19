@@ -1,11 +1,13 @@
 package org.example
 
-import org.example.menus.Menu
-import org.example.menus.MenuAtualizarTarefa
-import org.example.menus.MenuBuscarTarefa
-import org.example.menus.MenuTarefa
+import org.example.casosdeuso.*
+import org.example.menus.*
 
 fun main() {
+    val concluirTarefa = ConcluirTarefa()
+    val menuConcluirTarefa= MenuConcluirTarefa(
+        concluirTarefa
+    )
     val criarTarefa = CriarTarefa()
     val listarTarefas = ListarTarefas()
     val menuTarefa = MenuTarefa(
@@ -25,7 +27,8 @@ fun main() {
         menuTarefa,
         listarTarefas,
         menuBuscarTarefa,
-        menuAtualizarTarefa
+        menuAtualizarTarefa,
+        menuConcluirTarefa
     )
     val menu = Menu(
         gerenciadorTarefas = gerenciadorTarefas

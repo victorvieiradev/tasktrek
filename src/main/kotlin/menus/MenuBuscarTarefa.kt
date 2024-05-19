@@ -1,6 +1,6 @@
 package org.example.menus
 
-import org.example.BuscadorTarefa
+import org.example.casosdeuso.BuscadorTarefa
 import org.example.Tarefa
 import java.util.*
 
