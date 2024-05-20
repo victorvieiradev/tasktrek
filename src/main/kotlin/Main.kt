@@ -4,6 +4,10 @@ import org.example.casosdeuso.*
 import org.example.menus.*
 
 fun main() {
+    val excluirTarefa = ExcluirTarefa()
+    val menuExcluirTarefa = MenuExcluirTarefa(
+        excluirTarefa
+    )
     val concluirTarefa = ConcluirTarefa()
     val menuConcluirTarefa= MenuConcluirTarefa(
         concluirTarefa
@@ -28,7 +32,8 @@ fun main() {
         listarTarefas,
         menuBuscarTarefa,
         menuAtualizarTarefa,
-        menuConcluirTarefa
+        menuConcluirTarefa,
+        menuExcluirTarefa
     )
     val menu = Menu(
         gerenciadorTarefas = gerenciadorTarefas
