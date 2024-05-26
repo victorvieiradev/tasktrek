@@ -1,6 +1,6 @@
 package org.example.casosdeuso
 
-import org.example.Tarefa
+import org.example.model.Tarefa
 
 class ListarTarefas {
     fun listar(lista: List<Tarefa>) {

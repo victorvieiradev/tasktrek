@@ -1,7 +1,7 @@
 package org.example.casosdeuso
 
-import org.example.Status
-import org.example.Tarefa
+import org.example.enums.Status
+import org.example.model.Tarefa
 import java.util.*
 
 class CriarTarefa {

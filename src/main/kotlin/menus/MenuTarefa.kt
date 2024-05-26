@@ -1,7 +1,7 @@
 package org.example.menus
 
 import org.example.casosdeuso.CriarTarefa
-import org.example.Tarefa
+import org.example.model.Tarefa
 
 class MenuTarefa(
     private val criarTarefa: CriarTarefa

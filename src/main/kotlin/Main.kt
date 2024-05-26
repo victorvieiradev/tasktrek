@@ -4,6 +4,10 @@ import org.example.casosdeuso.*
 import org.example.menus.*
 
 fun main() {
+    val definirPrioridade = DefinirPrioridade()
+    val menuDefinirPrioridade= MenuDefinirPrioridade(
+        definirPrioridade
+    )
     val excluirTarefa = ExcluirTarefa()
     val menuExcluirTarefa = MenuExcluirTarefa(
         excluirTarefa
@@ -33,7 +37,8 @@ fun main() {
         menuBuscarTarefa,
         menuAtualizarTarefa,
         menuConcluirTarefa,
-        menuExcluirTarefa
+        menuExcluirTarefa,
+        menuDefinirPrioridade
     )
     val menu = Menu(
         gerenciadorTarefas = gerenciadorTarefas

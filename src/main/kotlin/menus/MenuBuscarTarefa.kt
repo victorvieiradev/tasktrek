@@ -1,7 +1,7 @@
 package org.example.menus
 
 import org.example.casosdeuso.BuscadorTarefa
-import org.example.Tarefa
+import org.example.model.Tarefa
 import java.util.*
 
 class MenuBuscarTarefa(

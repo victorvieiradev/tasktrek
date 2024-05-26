@@ -1,6 +1,6 @@
 package org.example.menus
 
-import org.example.Tarefa
+import org.example.model.Tarefa
 import org.example.casosdeuso.ExcluirTarefa
 import java.util.*
 

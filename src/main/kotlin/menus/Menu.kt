@@ -16,7 +16,7 @@ class Menu(
 
             opcao = scanner.nextInt()
             validarEntradaDoUsuario(opcao)
-        } while (opcao != 7)
+        } while (opcao != 8)
     }
 
     private fun validarEntradaDoUsuario(opcao: Int) {
@@ -27,7 +27,8 @@ class Menu(
             4 -> gerenciadorTarefas.atualizarTarefa()
             5 -> gerenciadorTarefas.concluirTarefa()
             6 -> gerenciadorTarefas.excluirTarefa()
-            7 -> println("Saindo...")
+            7 -> gerenciadorTarefas.definirPrioridade()
+            8 -> println("Saindo...")
             else -> println("Opção inválida! Tente novamente.")
         }
     }
@@ -41,7 +42,8 @@ class Menu(
         println("4 - Atualizar tarefa")
         println("5 - concluir tarefa")
         println("6 - Excluir tarefa")
-        println("7 - Sair")
+        println("7 - Definir prioridade ")
+        println("8 - Sair")
         print("Escolha uma opção: ")
     }
 
