@@ -3,28 +3,22 @@ package org.example.menus
 import org.example.casosdeuso.DefinirPrioridade
 import org.example.enums.Prioridade
 import org.example.model.Tarefa
+import org.example.util.EntradaUUID
 import java.util.*
 
 class MenuDefinirPrioridade(
-    private val definirPrioridade: DefinirPrioridade
+    private val definirPrioridade: DefinirPrioridade,
+    private val entradaUUID: EntradaUUID
 ) {
     private val scanner: Scanner = Scanner(System.`in`)
     fun exibirMenu(lista: MutableList<Tarefa>) {
-        while (true) {
-            println("Informe o id da tarefa a ser alterada a sua prioridade: \nOu Digite -m para voltar ao menu inicial: ")
-            val entrada = scanner.nextLine().trim()
-            if (entrada != "-m") {
-                println(validarOpcoesDaPrioridade(entrada, lista))
-            } else {
-                println("voltando ao menu inicial")
-                break
-            }
-
+        val id = entradaUUID.solicitarUUID()
+        if (id != null){
+            validarOpcoesDaPrioridade(id, lista)
         }
     }
 
-    private fun validarOpcoesDaPrioridade(entrada: String, lista: MutableList<Tarefa>): String {
-        val id = UUID.fromString(entrada)
+    private fun validarOpcoesDaPrioridade(id: UUID, lista: MutableList<Tarefa>): String {
         println("Informe: \n1 - Prioridade baixa \n2 - Prioridade média \n3 - Prioridade Alta")
         var op = scanner.nextLine().trim()
         while (op.isEmpty()) {

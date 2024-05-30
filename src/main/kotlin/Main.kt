@@ -2,19 +2,24 @@ package org.example
 
 import org.example.casosdeuso.*
 import org.example.menus.*
+import org.example.util.EntradaUUID
 
 fun main() {
+    val entrada = EntradaUUID()
     val definirPrioridade = DefinirPrioridade()
     val menuDefinirPrioridade= MenuDefinirPrioridade(
-        definirPrioridade
+        definirPrioridade,
+        entrada
     )
     val excluirTarefa = ExcluirTarefa()
     val menuExcluirTarefa = MenuExcluirTarefa(
-        excluirTarefa
+        excluirTarefa,
+        entrada
     )
     val concluirTarefa = ConcluirTarefa()
     val menuConcluirTarefa= MenuConcluirTarefa(
-        concluirTarefa
+        concluirTarefa,
+        entrada
     )
     val criarTarefa = CriarTarefa()
     val listarTarefas = ListarTarefas()
@@ -29,7 +34,8 @@ fun main() {
     )
     val atualizarTarefa = AtualizarTarefa()
     val menuAtualizarTarefa = MenuAtualizarTarefa(
-        atualizarTarefa
+        atualizarTarefa,
+        entrada
     )
     val gerenciadorTarefas = GerenciadorTarefas(
         menuTarefa,

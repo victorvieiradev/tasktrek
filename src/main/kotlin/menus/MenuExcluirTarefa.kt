@@ -1,25 +1,17 @@
 package org.example.menus
 
-import org.example.model.Tarefa
 import org.example.casosdeuso.ExcluirTarefa
-import java.util.*
+import org.example.model.Tarefa
+import org.example.util.EntradaUUID
 
 class MenuExcluirTarefa(
     private val excluirTarefa: ExcluirTarefa,
-    private val scanner: Scanner = Scanner(System.`in`)
+    private val entradaUUID: EntradaUUID,
 ) {
-    fun exibirMenu(lista: MutableList<Tarefa>){
-        val continuar = true
-        while (continuar){
-            println("Informe o id da tarefa a ser removida: \nOu digite -m para voltar ao menu inicial.")
-            val entrada = scanner.nextLine().trim()
-            if ("-m" == entrada){
-                println("Voltando ao menu inicial.")
-                break
-            }
-            val id = UUID.fromString(entrada)
+    fun exibirMenu(lista: MutableList<Tarefa>) {
+        val id = entradaUUID.solicitarUUID()
+        if (id != null) {
             excluirTarefa.excluir(id, lista)
-
         }
     }
 }

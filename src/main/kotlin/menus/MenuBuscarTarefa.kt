@@ -10,7 +10,7 @@ class MenuBuscarTarefa(
 ) {
 
 
-    fun executar(lista: MutableList<Tarefa>) {
+    fun exibirMenu(lista: MutableList<Tarefa>) {
         var continuar = true
 
         while (continuar) {

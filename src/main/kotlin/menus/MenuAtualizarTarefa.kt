@@ -2,25 +2,18 @@ package org.example.menus
 
 import org.example.casosdeuso.AtualizarTarefa
 import org.example.model.Tarefa
-import java.util.*
+import org.example.util.EntradaUUID
 
 class MenuAtualizarTarefa(
     private val atualizarTarefa: AtualizarTarefa,
-    private val scanner: Scanner = Scanner(System.`in`)
+    private val entradaUUID: EntradaUUID
 ) {
-    fun iniciar(lista: MutableList<Tarefa>) {
-        var continuar = true
-        while (continuar) {
-            println("Digite o ID da tarefa que deseja atualizar (ou -m para cancelar):")
-            val entrada = scanner.nextLine().trim()
-            if (entrada == "-m") {
-                println("Atualização cancelada.")
-                continuar = false
-                break
-            }
-            val id = UUID.fromString(entrada)
+    fun exibirMenu(lista: MutableList<Tarefa>) {
+        val id = entradaUUID.solicitarUUID()
+        if (id != null) {
             atualizarTarefa.atualizarTarefa(id, lista)
         }
-    }
 
     }
+
+}

@@ -24,11 +24,11 @@ class GerenciadorTarefas(
     }
 
     fun buscarTarefa() {
-        menuBuscarTarefa.executar(lista = tarefasAfazer)
+        menuBuscarTarefa.exibirMenu(lista = tarefasAfazer)
     }
 
     fun atualizarTarefa() {
-        menuAtualizarTarefa.iniciar(tarefasAfazer)
+        menuAtualizarTarefa.exibirMenu(tarefasAfazer)
     }
 
     fun concluirTarefa() {
